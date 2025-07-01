@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Painel Administrativo</h2>
+<h4>Usuários</h4>
+<ul class="list-group mb-4">
+    {% for user in users %}
+        <li class="list-group-item">{{ user.nickname }} ({{ user.email }}) {% if user.is_admin %}<span class="badge bg-warning">Admin</span>{% endif %}</li>
+    {% endfor %}
+</ul>
+<h4>Campeonatos</h4>
+<ul class="list-group">
+    {% for champ in championships %}
+        <li class="list-group-item">{{ champ.name }} - {{ champ.server }} ({{ champ.type }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

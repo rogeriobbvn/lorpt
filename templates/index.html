@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Campeonatos</h2>
+<a href="/championship/new" class="btn btn-primary mb-3" {% if not current_user.is_authenticated or not current_user.is_admin %}style="display:none"{% endif %}>Novo Campeonato</a>
+<ul class="list-group">
+    {% for champ in championships %}
+        <li class="list-group-item">
+            <a href="/championship/{{ champ.id }}">{{ champ.name }}</a> - {{ champ.server }} ({{ champ.type }})
+            <span class="badge bg-secondary">{{ champ.start_date.strftime('%d/%m/%Y') }}</span>
+        </li>
+    {% else %}
+        <li class="list-group-item">Nenhum campeonato cadastrado.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
