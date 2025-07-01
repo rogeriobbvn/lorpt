@@ -31,7 +31,7 @@ requirements.txt      # Dependências do projeto
    ```
 2. Execute o app:
    ```sh
-   python app.py
+   python3 app.py
    ```
 3. Acesse em: [http://localhost:5000](http://localhost:5000)
 
