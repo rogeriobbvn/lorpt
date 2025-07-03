@@ -38,3 +38,5 @@ class ProfileForm(FlaskForm):
 class ResultForm(FlaskForm):
     result = StringField('Resultado', validators=[DataRequired()])
     submit = SubmitField('Registrar')
+
+# Copie aqui o conteúdo de forms.py depois.

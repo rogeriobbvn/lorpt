@@ -44,3 +44,7 @@ championship_participants = db.Table('championship_participants',
     db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
     db.Column('championship_id', db.Integer, db.ForeignKey('championship.id'))
 )
+
+db = SQLAlchemy()
+
+# Copie aqui o conteúdo de models.py depois.
