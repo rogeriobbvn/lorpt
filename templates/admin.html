@@ -4,7 +4,14 @@
 <h4>Usuários</h4>
 <ul class="list-group mb-4">
     {% for user in users %}
-        <li class="list-group-item">{{ user.nickname }} ({{ user.email }}) {% if user.is_admin %}<span class="badge bg-warning">Admin</span>{% endif %}</li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">{{ user.nickname }} ({{ user.email }}) {% if user.is_admin %}<span class="badge bg-warning">Admin</span>{% endif %}
+          <span class="ms-2">Elo: <strong>{{ user.elo }}</strong></span>
+          <form method="POST" class="d-inline-flex align-items-center ms-2" style="gap:4px;" action="/admin">
+            <input type="hidden" name="user_id" value="{{ user.id }}">
+            <input type="text" name="elo" value="{{ user.elo }}" class="form-control form-control-sm" style="width:90px;display:inline-block;">
+            <button type="submit" class="btn btn-sm btn-primary">Salvar Elo</button>
+          </form>
+        </li>
     {% endfor %}
 </ul>
 <h4>Campeonatos</h4>

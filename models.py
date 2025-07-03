@@ -12,6 +12,10 @@ class User(UserMixin, db.Model):
     server = db.Column(db.String(50))
     image = db.Column(db.String(200))
     is_admin = db.Column(db.Boolean, default=False)
+    last_login = db.Column(db.DateTime)
+    elo = db.Column(db.String(20), default='Bronze')
+    victories = db.Column(db.Integer, default=0)
+    defeats = db.Column(db.Integer, default=0)
     matches = db.relationship('Match', backref='player', lazy=True)
 
 class Championship(db.Model):
@@ -26,6 +30,7 @@ class Championship(db.Model):
     auto_signup = db.Column(db.Boolean, default=True)
     participants = db.relationship('User', secondary='championship_participants', backref='championships')
     matches = db.relationship('Match', backref='championship', lazy=True)
+    started = db.Column(db.Boolean, default=False)
 
 class Match(db.Model):
     id = db.Column(db.Integer, primary_key=True)

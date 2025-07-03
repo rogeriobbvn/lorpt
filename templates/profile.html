@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4" style="max-width:600px;">
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 class="mb-3">Perfil de {{ current_user.nickname }}</h2>
+      <p><strong>Email:</strong> {{ current_user.email }}</p>
+      <form method="POST" class="mb-3">
+        {{ form.hidden_tag() }}
+        <div class="mb-2">
+          {{ form.nickname.label(class="form-label") }}
+          {{ form.nickname(class="form-control", placeholder="Novo nickname") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+      {% if last_login %}
+        <p><strong>Último login:</strong> {{ last_login.strftime('%d/%m/%Y %H:%M:%S') }}</p>
+      {% endif %}
+      <p><strong>Elo:</strong> {{ current_user.elo }}</p>
+      <p><strong>Vitórias:</strong> {{ victories }} | <strong>Derrotas:</strong> {{ defeats }}</p>
+      <hr>
+      <h5 class="mt-3">Campeonatos Inscritos</h5>
+      <ul class="list-group mb-2">
+        {% for champ in current_user.championships %}
+          <li class="list-group-item">
+            <a href="/championship/{{ champ.id }}">{{ champ.name }}</a> - {{ champ.server }} ({{ champ.type }})
+          </li>
+        {% else %}
+          <li class="list-group-item">Nenhum campeonato inscrito.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4" style="max-width:700px;">
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 class="mb-2">{{ champ.name }}</h2>
+      <p class="mb-1"><strong>Servidor:</strong> {{ champ.server }}</p>
+      <p class="mb-1"><strong>Tipo:</strong> {{ champ.type }}</p>
+      <p class="mb-1"><strong>Início:</strong> {{ champ.start_date.strftime('%d/%m/%Y %H:%M') }}</p>
+      <p class="mb-1"><strong>Fim:</strong> {{ champ.end_date.strftime('%d/%m/%Y %H:%M') }}</p>
+      <p class="mb-2"><strong>Descrição:</strong> {{ champ.description }}</p>
+      <p><strong>Participantes:</strong> {{ champ.participants|length }} / {{ champ.max_participants or '∞' }}</p>
+      {% if not champ.started %}
+        {% if current_user.is_authenticated and current_user.is_admin %}
+          <form method="POST" action="{{ url_for('iniciar_campeonato', champ_id=champ.id) }}">
+            <button type="submit" class="btn btn-danger mb-2">Iniciar Campeonato</button>
+          </form>
+        {% endif %}
+        {% if current_user.is_authenticated and current_user not in champ.participants %}
+          <form method="POST" action="{{ url_for('inscrever', champ_id=champ.id) }}">
+            <button type="submit" class="btn btn-primary">Inscrever-se</button>
+          </form>
+        {% elif current_user.is_authenticated and current_user in champ.participants %}
+          <div class="alert alert-success mt-2">Você já está inscrito neste campeonato.</div>
+        {% else %}
+          <div class="alert alert-info mt-2">Faça login para se inscrever.</div>
+        {% endif %}
+      {% else %}
+        <div class="alert alert-warning">Campeonato já iniciado. Inscrições encerradas.</div>
+      {% endif %}
+      <hr>
+      <h4 class="mt-3">Duelos</h4>
+      {% if champ.matches %}
+        <table class="table table-sm table-bordered">
+          <thead><tr><th>Jogador</th><th>Oponente</th><th>Resultado</th>{% if current_user.is_authenticated and current_user.is_admin %}<th>Ação</th>{% endif %}</tr></thead>
+          <tbody>
+            {% for match in champ.matches %}
+              <tr>
+                <td>{{ match.player.nickname }}</td>
+                <td>{{ match.opponent }}</td>
+                <td>{{ match.result or '-' }}</td>
+                {% if current_user.is_authenticated and current_user.is_admin %}
+                <td>
+                  <form method="POST" action="{{ url_for('atualizar_score', match_id=match.id) }}" class="d-flex align-items-center" style="gap:4px;">
+                    <input type="text" name="result" value="{{ match.result or '' }}" class="form-control form-control-sm" style="width:60px;">
+                    <button type="submit" class="btn btn-sm btn-success">Salvar</button>
+                  </form>
+                </td>
+                {% endif %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>Nenhum duelo gerado ainda.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

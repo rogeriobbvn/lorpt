@@ -24,6 +24,17 @@ class ChampionshipForm(FlaskForm):
     auto_signup = BooleanField('Inscrição automática', default=True)
     submit = SubmitField('Criar Campeonato')
 
+class AdminEloForm(FlaskForm):
+    elo = StringField('Novo Elo', validators=[DataRequired(), Length(min=3, max=20)])
+    submit = SubmitField('Atualizar Elo')
+
+class EmptyForm(FlaskForm):
+    pass
+
+class ProfileForm(FlaskForm):
+    nickname = StringField('Novo Nickname', validators=[DataRequired(), Length(min=3, max=50)])
+    submit = SubmitField('Salvar')
+
 class ResultForm(FlaskForm):
     result = StringField('Resultado', validators=[DataRequired()])
     submit = SubmitField('Registrar')
