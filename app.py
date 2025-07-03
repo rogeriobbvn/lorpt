@@ -79,7 +79,7 @@ def new_championship():
         )
         db.session.add(champ)
         db.session.commit()
-        flash('Campeonato criado!')
+        flash('Campeonato criado com sucesso!')
         return redirect(url_for('index'))
     return render_template('new_championship.html', form=form)
 

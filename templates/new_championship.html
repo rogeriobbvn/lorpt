@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+  <div class="card shadow-lg border-0">
+    <div class="card-body">
+      <h2 class="text-center mb-4" style="font-weight:700; color:#222;">Novo Campeonato</h2>
+      {% if form.errors %}
+        <div class="alert alert-danger">
+          <ul class="mb-0">
+            {% for field, errors in form.errors.items() %}
+              {% for error in errors %}
+                <li><strong>{{ form[field].label.text }}:</strong> {{ error }}</li>
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+          {{ form.name.label(class="form-label") }}
+          {{ form.name(class="form-control", placeholder="Nome do campeonato") }}
+        </div>
+        <div class="mb-3">
+          {{ form.description.label(class="form-label") }}
+          {{ form.description(class="form-control", placeholder="Descrição") }}
+        </div>
+        <div class="mb-3">
+          {{ form.server.label(class="form-label") }}
+          {{ form.server(class="form-control", placeholder="Servidor") }}
+        </div>
+        <div class="mb-3">
+          {{ form.type.label(class="form-label") }}
+          {{ form.type(class="form-control", placeholder="Tipo do campeonato") }}
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            {{ form.start_date.label(class="form-label") }}
+            {{ form.start_date(class="form-control", placeholder="AAAA-MM-DD HH:MM") }}
+          </div>
+          <div class="col mb-3">
+            {{ form.end_date.label(class="form-label") }}
+            {{ form.end_date(class="form-control", placeholder="AAAA-MM-DD HH:MM") }}
+          </div>
+        </div>
+        <div class="mb-3">
+          {{ form.max_participants.label(class="form-label") }}
+          {{ form.max_participants(class="form-control", placeholder="Limite de participantes") }}
+        </div>
+        <div class="form-check mb-3">
+          {{ form.auto_signup(class="form-check-input") }}
+          {{ form.auto_signup.label(class="form-check-label") }}
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="background:#3b5aff; font-weight:600;">Criar Campeonato</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
