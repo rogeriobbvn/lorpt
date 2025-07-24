@@ -17,7 +17,6 @@
     
     <!-- SVG Parallax Elements -->
     <div class="svg-parallax"></div>
-    
     <div class="hero-content">
       
       <h1 class="hero-title">Campeonato Legend Online X1 - Edição Julho</h1>
@@ -31,13 +30,14 @@
     <div class="container">
       <div class="tabs-container animate-on-scroll">
         <div class="tab-buttons">
-          <button class="tab-button active" data-tab="faltando"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
+          <button class="tab-button" data-tab="faltando"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
           <button class="tab-button" data-tab="realizadas"><i class="fas fa-check-circle"></i> Partidas Realizadas</button>
           <button class="tab-button" data-tab="classificados"><i class="fas fa-chart-line"></i> Classificação</button>
+          <button class="tab-button active" data-tab="fase2"><i class="fas fa-trophy"></i> Fase 2</button>
           <button class="tab-button" data-tab="jogadores"><i class="fas fa-users"></i> Jogadores</button>
         </div>
 
-              <div id="faltando" class="tab-content active">
+              <div id="faltando" class="tab-content">
           <h2 class="group-title group-a"><i class="fas fa-users"></i> Grupo A - Partidas Faltando</h2>
           <ul class="match-list group-a-matches">
             <!-- Todas as partidas do Grupo A foram realizadas -->
@@ -135,6 +135,90 @@
                 <tr><td>Kelvyn <span class="text-sm italic text-gray-500">(Suspensa)</span></td><td>3</td><td>1</td><td class="text-red-600 font-bold">-2</td></tr>
                 <tr><td>João <span class="text-sm italic text-gray-500">(Suspensa)</span></td><td>3</td><td>1</td><td class="text-green-600 font-bold">+3</td></tr>
                 <tr><td>Douglas <span class="text-sm italic text-gray-500">(Suspensa)</span></td><td>3</td><td>0</td><td class="text-red-600 font-bold">-9</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div id="fase2" class="tab-content active">
+          <div class="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-4 rounded-lg mb-8 shadow-lg">
+            <h2 class="text-xl font-bold"><i class="fas fa-trophy"></i> Fase 2 - Grupo Final (MD9)</h2>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Os 3 melhores de cada grupo formam um novo grupo de 6 jogadores.</li>
+              <li>Todos contra todos novamente, mas agora em Melhor de 9 (MD9) → vence quem ganhar 5 duelos.</li>
+            </ul>
+          </div>
+          
+          <h2 class="group-title"><i class="fas fa-users"></i> Jogadores Classificados</h2>
+          <div class="overflow-x-auto mb-8">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th><i class="fas fa-user"></i> Jogador</th>
+                  <th><i class="fas fa-users"></i> Grupo Original</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Tebas</td><td class="text-blue-600 font-bold">Grupo A</td></tr>
+                <tr><td>Anjo</td><td class="text-blue-600 font-bold">Grupo A</td></tr>
+                <tr><td>Torzinho</td><td class="text-blue-600 font-bold">Grupo A</td></tr>
+                <tr><td>Abner</td><td class="text-green-600 font-bold">Grupo B</td></tr>
+                <tr><td>Dean</td><td class="text-green-600 font-bold">Grupo B</td></tr>
+                <tr><td>David</td><td class="text-green-600 font-bold">Grupo B</td></tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <h2 class="group-title"><i class="fas fa-clipboard-list"></i> Partidas da Fase Final (MD9)</h2>
+          <p class="text-sm italic mb-4">*Melhor de 9 - Vence quem ganhar 5 duelos.</p>
+          
+          <ul class="match-list">
+            <!-- Tebas matches -->
+            <li><i class="fas fa-gamepad"></i> Tebas x Anjo <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Tebas x Torzinho <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Tebas x Abner <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Tebas x Dean <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Tebas x David <span class="text-sm italic">(MD9)</span></li>
+            
+            <!-- Anjo matches -->
+            <li><i class="fas fa-gamepad"></i> Anjo x Torzinho <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Anjo x Abner <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Anjo x Dean <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Anjo x David <span class="text-sm italic">(MD9)</span></li>
+            
+            <!-- Torzinho matches -->
+            <li><i class="fas fa-gamepad"></i> Torzinho x Abner <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Torzinho x Dean <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Torzinho x David <span class="text-sm italic">(MD9)</span></li>
+            
+            <!-- Abner matches -->
+            <li><i class="fas fa-gamepad"></i> Abner x Dean <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-gamepad"></i> Abner x David <span class="text-sm italic">(MD9)</span></li>
+            
+            <!-- Dean matches -->
+            <li><i class="fas fa-gamepad"></i> Dean x David <span class="text-sm italic">(MD9)</span></li>
+          </ul>
+          
+          <h2 class="group-title mt-8"><i class="fas fa-chart-line"></i> Classificação Final</h2>
+          <p class="text-sm italic mb-4">*Classificação será atualizada conforme as partidas forem realizadas.</p>
+          
+          <div class="overflow-x-auto">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th><i class="fas fa-user"></i> Jogador</th>
+                  <th><i class="fas fa-gamepad"></i> Partidas</th>
+                  <th><i class="fas fa-trophy"></i> Vitórias</th>
+                  <th><i class="fas fa-chart-bar"></i> Saldo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Tebas</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>Anjo</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>Torzinho</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>Abner</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>Dean</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>David</td><td>0</td><td>0</td><td>0</td></tr>
               </tbody>
             </table>
           </div>
