@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add scroll animations
   initScrollAnimations();
+  
+  // Initialize tournament selector
+  initTournamentSelector();
 });
 
 // Tab functionality
@@ -164,6 +167,35 @@ function createRandomShape(container, type) {
   svg.setAttribute('data-mouse-speed', Math.random() * 0.05 + 0.01);
   
   container.appendChild(svg);
+}
+
+// Tournament selector functionality
+function initTournamentSelector() {
+  const tournamentSelect = document.getElementById('tournament-select');
+  const julyHero = document.getElementById('july-hero');
+  const augustHero = document.getElementById('august-hero');
+  const julyTournament = document.getElementById('july-tournament');
+  const augustTournament = document.getElementById('august-tournament');
+  
+  if (tournamentSelect) {
+    tournamentSelect.addEventListener('change', function() {
+      const selectedValue = this.value;
+      
+      if (selectedValue === 'july') {
+        // Show July tournament content
+        julyHero.classList.add('active');
+        augustHero.classList.remove('active');
+        julyTournament.classList.add('active');
+        augustTournament.classList.remove('active');
+      } else if (selectedValue === 'august') {
+        // Show August tournament content
+        julyHero.classList.remove('active');
+        augustHero.classList.add('active');
+        julyTournament.classList.remove('active');
+        augustTournament.classList.add('active');
+      }
+    });
+  }
 }
 
 // Call this function after DOM is loaded
