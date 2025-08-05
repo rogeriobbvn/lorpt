@@ -11,6 +11,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="tournament-selector">
+          <select id="tournament-select" class="tournament-select">
+            <option value="july">Edição Julho 2025</option>
+            <option value="august">Edição Agosto 2025</option>
+          </select>
+        </div>
+        <div class="social-links">
+          <a href="https://www.youtube.com" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://discord.gg/7guqujEpTK" target="_blank" class="social-link discord-btn"><i class="fab fa-discord"></i></a>
+          <a href="https://wa.me/5500000000000" target="_blank" class="social-link whatsapp-btn"><i class="fab fa-whatsapp"></i> Contato</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
   <!-- Hero Section with Parallax -->
   <section class="hero">
     <div class="parallax-bg" style="background-image: url('poster.png');"></div>
@@ -19,23 +39,32 @@
     <div class="svg-parallax"></div>
     <div class="hero-content">
       
-      <h1 class="hero-title">Campeonato Legend Online X1 - Edição Julho</h1>
-      <p class="hero-subtitle">Competição oficial de Legend Online - 2025</p>
-      <a href="#tabs" class="hero-cta">Ver Partidas <i class="fas fa-arrow-right ml-2"></i></a>
+      <div id="july-hero" class="tournament-hero active">
+        <h1 class="hero-title">Campeonato Legend Online X1 - Edição Julho</h1>
+        <p class="hero-subtitle">Competição oficial de Legend Online - 2025</p>
+        <a href="#tabs" class="hero-cta">Ver Partidas <i class="fas fa-arrow-right ml-2"></i></a>
+      </div>
+      
+      <div id="august-hero" class="tournament-hero">
+        <h1 class="hero-title">Campeonato Legend Online X1 - Edição Agosto</h1>
+        <p class="hero-subtitle">Novas inscrições abertas - 2025</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN3bQ5BmCiU7Jgl2lPf-H1dV_BHRO_nxnIpm5eRwo0cX10qw/viewform" target="_blank" class="hero-cta">Inscreva-se <i class="fas fa-arrow-right ml-2"></i></a>
+      </div>
     </div>
   </section>
 
       <!-- Tabs Section -->
   <section id="tabs" class="tabs-section">
     <div class="container">
-      <div class="tabs-container animate-on-scroll">
-        <div class="tab-buttons">
-          <button class="tab-button" data-tab="faltando"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
-          <button class="tab-button" data-tab="realizadas"><i class="fas fa-check-circle"></i> Partidas Realizadas</button>
-          <button class="tab-button" data-tab="classificados"><i class="fas fa-chart-line"></i> Classificação</button>
-          <button class="tab-button active" data-tab="fase2"><i class="fas fa-trophy"></i> Fase 2</button>
-          <button class="tab-button" data-tab="jogadores"><i class="fas fa-users"></i> Jogadores</button>
-        </div>
+      <div id="july-tournament" class="tournament-content active">
+        <div class="tabs-container animate-on-scroll">
+          <div class="tab-buttons">
+            <button class="tab-button" data-tab="faltando"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
+            <button class="tab-button" data-tab="realizadas"><i class="fas fa-check-circle"></i> Partidas Realizadas</button>
+            <button class="tab-button" data-tab="classificados"><i class="fas fa-chart-line"></i> Classificação</button>
+            <button class="tab-button active" data-tab="fase2"><i class="fas fa-trophy"></i> Fase 2</button>
+            <button class="tab-button" data-tab="jogadores"><i class="fas fa-users"></i> Jogadores</button>
+          </div>
 
               <div id="faltando" class="tab-content">
           <h2 class="group-title group-a"><i class="fas fa-users"></i> Grupo A - Partidas Faltando</h2>
@@ -174,33 +203,38 @@
           
           <ul class="match-list">
             <!-- Tebas matches -->
-            <li><i class="fas fa-trophy"></i> Tebas x Anjo <span class="text-sm italic">(Pendente)</span></li>
+            <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-red-600">4</span> x <span class="font-bold text-green-600">5</span> Anjo <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> Torzinho <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-red-600">3</span> x <span class="font-bold text-green-600">5</span> Abner <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">5</span> Dean <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">0</span> David <span class="text-sm italic">(MD9)</span></li>
             
             <!-- Anjo matches -->
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">4</span> Tor <span class="text-sm italic">(MD9)</span></li>
+            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> Tor <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-red-600">3</span> x <span class="font-bold text-green-600">5</span> Abner <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Anjo x Dean <span class="text-sm italic">(Pendente)</span></li>
+            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-red-600">4</span> x <span class="font-bold text-green-600">5</span> Dean <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> David <span class="text-sm italic">(MD9)</span></li>
             
             <!-- Torzinho matches -->
-            <li><i class="fas fa-trophy"></i> Tor x Abner <span class="text-sm italic">(Pendente)</span></li>
-            <li><i class="fas fa-trophy"></i> Tor x Dean <span class="text-sm italic">(Pendente)</span></li>
+            <li><i class="fas fa-trophy"></i> Tor <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">1</span> Abner <span class="text-sm italic">(W.O)</span></li>
+            <li><i class="fas fa-trophy"></i> Tor <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">5</span> Dean <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Torzinho <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">5</span> David <span class="text-sm italic">(MD9)</span></li>
             
             <!-- Abner matches -->
-            <li><i class="fas fa-trophy"></i> Abner x Dean <span class="text-sm italic">(Pendente)</span></li>
+            <li><i class="fas fa-trophy"></i> Abner <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">2</span> Dean <span class="text-sm italic">(MD9)</span></li>
             <li><i class="fas fa-trophy"></i> Abner <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">4</span> David <span class="text-sm italic">(MD9)</span></li>
             
             <!-- Dean matches -->
             <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> David <span class="text-sm italic">(MD9)</span></li>
           </ul>
           
+          <h2 class="group-title mt-8"><i class="fas fa-trophy text-yellow-500"></i> Grande Final</h2>
+          <ul class="match-list">
+            <li><i class="fas fa-crown text-yellow-500"></i> Dean <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">1</span> Abner <span class="text-sm italic">(MD9)</span></li>
+          </ul>
+
           <h2 class="group-title mt-8"><i class="fas fa-chart-line"></i> Classificação Final</h2>
-          <p class="text-sm italic mb-4">*Classificação será atualizada conforme as partidas forem realizadas.</p>
+          <p class="text-sm italic mb-4">*Classificação final do campeonato.</p>
           
           <div class="overflow-x-auto">
             <table class="standings-table">
@@ -213,12 +247,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="bg-green-100"><td><span class="font-bold">1º</span> Abner</td><td>3</td><td>3</td><td>5</td></tr>
-                <tr class="bg-green-100"><td><span class="font-bold">2º</span> Dean</td><td>2</td><td>2</td><td>6</td></tr>
-                <tr><td><span class="font-bold">3º</span> Tebas</td><td>4</td><td>2</td><td>4</td></tr>
-                <tr><td><span class="font-bold">4º</span> Anjo</td><td>3</td><td>2</td><td>3</td></tr>
+                <tr class="bg-yellow-100"><td><span class="font-bold text-yellow-600">1º</span> Dean</td><td>6</td><td>5</td><td>+9</td></tr>
+                <tr class="bg-gray-100"><td><span class="font-bold text-gray-600">2º</span> Abner</td><td>6</td><td>4</td><td>+5</td></tr>
+                <tr><td><span class="font-bold">3º</span> Anjo</td><td>5</td><td>3</td><td>+2</td></tr>
+                <tr><td><span class="font-bold">4º</span> Tebas</td><td>5</td><td>2</td><td>0</td></tr>
                 <tr><td><span class="font-bold">5º</span> David</td><td>5</td><td>1</td><td>-14</td></tr>
-                <tr><td><span class="font-bold">6º</span> Tor</td><td>3</td><td>0</td><td>-4</td></tr>
+                <tr><td><span class="font-bold">6º</span> Tor</td><td>5</td><td>0</td><td>-8</td></tr>
               </tbody>
             </table>
           </div>
@@ -335,6 +369,34 @@
           </div>
         </div>
       </div>
+      </div>
+      
+      <!-- August Tournament Content -->
+      <div id="august-tournament" class="tournament-content">
+        <div class="tabs-container animate-on-scroll">
+          <div class="registration-section">
+            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> Inscrições Abertas - Edição Agosto 2025</h2>
+            <div class="registration-card">
+              <div class="registration-info">
+                <h3>Nova edição do campeonato em breve!</h3>
+                <p>As inscrições para a edição de Agosto 2025 estão abertas. Garanta sua vaga!</p>
+                <ul class="registration-details">
+                  <li><i class="fas fa-calendar"></i> Início: 7 de Agosto de 2025</li>
+                  <li><i class="fas fa-users"></i> Vagas limitadas: 12 jogadores</li>
+                  <li><i class="fas fa-coins"></i> Taxa de inscrição: R$ 10,00</li>
+                  <li><i class="fas fa-trophy"></i> Premiação: 100% do valor arrecadado</li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN3bQ5BmCiU7Jgl2lPf-H1dV_BHRO_nxnIpm5eRwo0cX10qw/viewform" target="_blank" class="registration-button">
+                  <i class="fas fa-user-plus"></i> Inscreva-se Agora
+                </a>
+              </div>
+              <div class="registration-image">
+                <img src="Gemini_Generated_Image_91rd6r91rd6r91rd.png" alt="Campeonato Legend Online" class="registration-poster">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
     </div>
@@ -360,9 +422,35 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 Campeonato Legend Online - Todos os direitos reservados</p>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Logo Legend Online" class="footer-logo-img">
+          <p>© 2025 Campeonato Legend Online - Todos os direitos reservados</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-social">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+              <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="https://discord.gg/7guqujEpTK" target="_blank" class="social-icon"><i class="fab fa-discord"></i> Discord</a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h3>Contato</h3>
+            <a href="https://wa.me/5500000000000" target="_blank" class="whatsapp-button">
+              <i class="fab fa-whatsapp"></i> Fale conosco pelo WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
+  
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5500000000000" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Scripts -->
   <script src="scripts.js"></script>
