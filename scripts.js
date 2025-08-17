@@ -22,13 +22,23 @@ function initTabs() {
     button.addEventListener('click', () => {
       const tabId = button.getAttribute('data-tab');
       
-      // Remove active class from all buttons and contents
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
+      // Get the parent tournament container
+      const parentTournament = button.closest('.tournament-content');
+      
+      // Only affect tabs within the same tournament
+      const tournamentTabButtons = parentTournament.querySelectorAll('.tab-button');
+      const tournamentTabContents = parentTournament.querySelectorAll('.tab-content');
+      
+      // Remove active class from all buttons and contents within this tournament
+      tournamentTabButtons.forEach(btn => btn.classList.remove('active'));
+      tournamentTabContents.forEach(content => content.classList.remove('active'));
       
       // Add active class to current button and content
       button.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
+      const targetContent = document.getElementById(tabId);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
     });
   });
 }

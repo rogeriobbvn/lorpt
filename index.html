@@ -18,7 +18,7 @@
         <div class="tournament-selector">
           <select id="tournament-select" class="tournament-select">
             <option value="july">Edição Julho 2025</option>
-            <option value="august">Edição Agosto 2025</option>
+            <option value="august" selected>Edição Agosto 2025</option>
           </select>
         </div>
         <div class="social-links">
@@ -39,16 +39,16 @@
     <div class="svg-parallax"></div>
     <div class="hero-content">
       
-      <div id="july-hero" class="tournament-hero active">
+      <div id="july-hero" class="tournament-hero">
         <h1 class="hero-title">Campeonato Legend Online X1 - Edição Julho</h1>
         <p class="hero-subtitle">Competição oficial de Legend Online - 2025</p>
         <a href="#tabs" class="hero-cta">Ver Partidas <i class="fas fa-arrow-right ml-2"></i></a>
       </div>
       
-      <div id="august-hero" class="tournament-hero">
+      <div id="august-hero" class="tournament-hero active">
         <h1 class="hero-title">Campeonato Legend Online X1 - Edição Agosto</h1>
-        <p class="hero-subtitle">Novas inscrições abertas - 2025</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN3bQ5BmCiU7Jgl2lPf-H1dV_BHRO_nxnIpm5eRwo0cX10qw/viewform" target="_blank" class="hero-cta">Inscreva-se <i class="fas fa-arrow-right ml-2"></i></a>
+        <p class="hero-subtitle">Competição oficial de Legend Online - 2025</p>
+        <a href="#tabs" class="hero-cta">Ver Partidas <i class="fas fa-arrow-right ml-2"></i></a>
       </div>
     </div>
   </section>
@@ -56,7 +56,7 @@
       <!-- Tabs Section -->
   <section id="tabs" class="tabs-section">
     <div class="container">
-      <div id="july-tournament" class="tournament-content active">
+      <div id="july-tournament" class="tournament-content">
         <div class="tabs-container animate-on-scroll">
           <div class="tab-buttons">
             <button class="tab-button" data-tab="faltando"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
@@ -372,26 +372,196 @@
       </div>
       
       <!-- August Tournament Content -->
-      <div id="august-tournament" class="tournament-content">
+      <div id="august-tournament" class="tournament-content active">
         <div class="tabs-container animate-on-scroll">
-          <div class="registration-section">
-            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> Inscrições Abertas - Edição Agosto 2025</h2>
-            <div class="registration-card">
-              <div class="registration-info">
-                <h3>Nova edição do campeonato em breve!</h3>
-                <p>As inscrições para a edição de Agosto 2025 estão abertas. Garanta sua vaga!</p>
-                <ul class="registration-details">
-                  <li><i class="fas fa-calendar"></i> Início: 7 de Agosto de 2025</li>
-                  <li><i class="fas fa-users"></i> Vagas limitadas: 12 jogadores</li>
-                  <li><i class="fas fa-coins"></i> Taxa de inscrição: R$ 10,00</li>
-                  <li><i class="fas fa-trophy"></i> Premiação: 100% do valor arrecadado</li>
-                </ul>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN3bQ5BmCiU7Jgl2lPf-H1dV_BHRO_nxnIpm5eRwo0cX10qw/viewform" target="_blank" class="registration-button">
-                  <i class="fas fa-user-plus"></i> Inscreva-se Agora
-                </a>
+          <div class="tab-buttons">
+            <button class="tab-button" data-tab="faltando-aug"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
+            <button class="tab-button" data-tab="realizadas-aug"><i class="fas fa-check-circle"></i> Partidas Realizadas</button>
+            <button class="tab-button active" data-tab="classificados-aug"><i class="fas fa-chart-line"></i> Classificação</button>
+            <button class="tab-button" data-tab="jogadores-aug"><i class="fas fa-users"></i> Jogadores</button>
+          </div>
+
+          <div id="faltando-aug" class="tab-content">
+            <h2 class="group-title group-a"><i class="fas fa-users"></i> Grupo A - Partidas Faltando</h2>
+            <ul class="match-list group-a-matches">
+              <li><i class="fas fa-clock text-yellow-600"></i> Jean x Maycão</li>
+              <li><i class="fas fa-clock text-yellow-600"></i> Tor x Maycão</li>
+            </ul>
+
+            <h2 class="group-title group-b"><i class="fas fa-users"></i> Grupo B - Partidas Faltando</h2>
+            <ul class="match-list group-b-matches">
+              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x Anjo</li>
+              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x Foras Filho</li>
+              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x David</li>
+              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x Jow</li>
+            </ul>
+          </div>
+
+          <div id="realizadas-aug" class="tab-content">
+            <h2 class="group-title"><i class="fas fa-check-double"></i> Resultados Confirmados</h2>
+            <ul class="match-list">
+              <!-- Grupo A -->
+              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Tebas</li>
+              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">2</span> Foras Pai</li>
+              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Will</li>
+              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Tor</li>
+              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Will</li>
+              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Tor</li>
+              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Pai</li>
+              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Maycão</li>
+              <li><i class="fas fa-trophy"></i> Will <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Pai</li>
+              <li><i class="fas fa-trophy"></i> Will <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Tor</li>
+              <li><i class="fas fa-trophy"></i> Will <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Maycão</li>
+              <li><i class="fas fa-trophy"></i> Tor <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Pai</li>
+              <li><i class="fas fa-trophy"></i> Foras Pai <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Maycão</li>
+              
+              <!-- Grupo B -->
+              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Jow</li>
+              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Guerra</li>
+              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> David</li>
+              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Filho</li>
+              <li><i class="fas fa-trophy"></i> Foras Filho <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Anjo</li>
+              <li><i class="fas fa-trophy"></i> Foras Filho <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">2</span> David</li>
+              <li><i class="fas fa-trophy"></i> David <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">2</span> Anjo</li>
+              <li><i class="fas fa-trophy"></i> David <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Guerra</li>
+              <li><i class="fas fa-trophy"></i> David <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Jow</li>
+              <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Dean</li>
+              <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Jow</li>
+              <li><i class="fas fa-trophy"></i> Jow <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Filho</li>
+            </ul>
+          </div>
+
+          <div id="classificados-aug" class="tab-content active">
+            <h2 class="group-title"><i class="fas fa-chart-line"></i> Tabela de Classificação</h2>
+            <p class="text-sm italic mb-4">*Classificação parcial com base nas partidas realizadas.</p>
+
+            <!-- Grupo A -->
+            <h3 class="group-title group-a"><i class="fas fa-users"></i> Grupo A</h3>
+            <div class="overflow-x-auto">
+              <table class="standings-table">
+                <thead>
+                  <tr>
+                    <th><i class="fas fa-user"></i> Jogador</th>
+                    <th><i class="fas fa-gamepad"></i> Partidas</th>
+                    <th><i class="fas fa-trophy"></i> Vitórias</th>
+                    <th><i class="fas fa-chart-bar"></i> Saldo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Tebas</td><td>5</td><td>4</td><td class="text-green-600 font-bold">+4</td></tr>
+                  <tr><td>Will</td><td>5</td><td>3</td><td class="text-green-600 font-bold">+3</td></tr>
+                  <tr><td>Jean</td><td>4</td><td>3</td><td class="text-green-600 font-bold">+2</td></tr>
+                  <tr><td>Foras Pai</td><td>5</td><td>2</td><td class="text-red-600 font-bold">-2</td></tr>
+                  <tr><td>Tor</td><td>4</td><td>1</td><td class="text-red-600 font-bold">-1</td></tr>
+                  <tr><td>Maycão</td><td>3</td><td>0</td><td class="text-red-600 font-bold">-6</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Grupo B -->
+            <h3 class="group-title group-b mt-6"><i class="fas fa-users"></i> Grupo B</h3>
+            <div class="overflow-x-auto">
+              <table class="standings-table">
+                <thead>
+                  <tr>
+                    <th><i class="fas fa-user"></i> Jogador</th>
+                    <th><i class="fas fa-gamepad"></i> Partidas</th>
+                    <th><i class="fas fa-trophy"></i> Vitórias</th>
+                    <th><i class="fas fa-chart-bar"></i> Saldo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Dean</td><td>5</td><td>4</td><td class="text-green-600 font-bold">+5</td></tr>
+                  <tr><td>Anjo</td><td>4</td><td>3</td><td class="text-green-600 font-bold">+4</td></tr>
+                  <tr><td>David</td><td>5</td><td>3</td><td class="text-green-600 font-bold">0</td></tr>
+                  <tr><td>Jow</td><td>4</td><td>1</td><td class="text-red-600 font-bold">-2</td></tr>
+                  <tr><td>Guerra</td><td>2</td><td>0</td><td class="text-red-600 font-bold">-2</td></tr>
+                  <tr><td>Foras Filho</td><td>4</td><td>1</td><td class="text-red-600 font-bold">-5</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="jogadores-aug" class="tab-content">
+            <h2 class="group-title"><i class="fas fa-users"></i> Participantes do Campeonato</h2>
+            
+            <h3 class="group-title group-a"><i class="fas fa-users"></i> Grupo A</h3>
+            <div class="players-grid">
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Tebas</h4>
+                  <p class="player-stats">4V - 0D</p>
+                </div>
               </div>
-              <div class="registration-image">
-                <img src="Gemini_Generated_Image_91rd6r91rd6r91rd.png" alt="Campeonato Legend Online" class="registration-poster">
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Jean</h4>
+                  <p class="player-stats">3V - 1D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Will</h4>
+                  <p class="player-stats">3V - 2D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Tor</h4>
+                  <p class="player-stats">1V - 2D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Foras Pai</h4>
+                  <p class="player-stats">1V - 3D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Maycão</h4>
+                  <p class="player-stats">0V - 2D</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="group-title group-b"><i class="fas fa-users"></i> Grupo B</h3>
+            <div class="players-grid">
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Dean</h4>
+                  <p class="player-stats">4V - 0D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Anjo</h4>
+                  <p class="player-stats">3V - 1D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>David</h4>
+                  <p class="player-stats">2V - 2D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Jow</h4>
+                  <p class="player-stats">1V - 3D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Foras Filho</h4>
+                  <p class="player-stats">1V - 3D</p>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-info">
+                  <h4>Guerra</h4>
+                  <p class="player-stats">0V - 2D</p>
+                </div>
               </div>
             </div>
           </div>
@@ -401,30 +571,13 @@
   </section>
     </div>
 
-      <!-- Rules Section -->
-  <section class="rules-section">
-    <div class="container">
-      <div class="rules-card animate-on-scroll">
-        <h2 class="rules-title text-2xl font-bold"><i class="fas fa-scroll"></i> Regras do Campeonato</h2>
-        <ul class="rules-list">
-          <li>Todos contra todos no grupo (MD5 - Melhor de 5)</li>
-          <li>Passam 3 primeiros de cada grupo para a Fase 2</li>
-          <li>Fase 2 em MD9 (Melhor de 9)</li>
-          <li>Final única em MD9</li>
-          <li>Diferença máxima de poder: 10.000</li>
-          <li>Obrigatório print ou live comprovando poder</li>
-        </ul>
-        <p class="rules-note">Resultado e prints devem ser enviados no Discord do campeonato.</p>
-      </div>
-    </div>
-  </section>
   
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="logo.png" alt="Logo Legend Online" class="footer-logo-img">
+          <img src="logotipo.png" alt="Logo Legend Online" class="footer-logo-img">
           <p>© 2025 Campeonato Legend Online - Todos os direitos reservados</p>
         </div>
         <div class="footer-links">
