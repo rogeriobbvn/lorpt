@@ -1,0 +1,292 @@
+{
+  "_doc": "Arquivo de dados do Campeonato Legend Online. Edite este JSON para atualizar lutas, placares e links do YouTube.",
+  "_instrucoes": {
+    "como_editar": "Cada edição possui um array 'matches' com as lutas. Para cada luta, preencha score1, score2 e youtube_url.",
+    "campos_match": {
+      "player1": "Nome do jogador 1",
+      "player2": "Nome do jogador 2",
+      "score1": "Placar do jogador 1 (string vazia se ainda não jogou)",
+      "score2": "Placar do jogador 2 (string vazia se ainda não jogou)",
+      "youtube_url": "Link do YouTube da luta (string vazia se não tiver)",
+      "state": "complete = luta finalizada, open = pendente",
+      "winner": "Nome do vencedor (vazio se pendente)",
+      "round": "Número da rodada",
+      "note": "Observação opcional (ex: W.O, Suspensa, MD9)"
+    }
+  },
+  "editions": [
+    {
+      "id": "ed1",
+      "name": "1ª Edição - Julho 2025",
+      "description": "Campeonato Legend Online X1 - Fase de Grupos + Fase Final MD9",
+      "challonge_url": "",
+      "phases": [
+        {
+          "name": "Fase de Grupos",
+          "type": "groups",
+          "groups": [
+            {
+              "name": "Grupo A",
+              "standings": [
+                { "player": "Tebas", "matches": 5, "wins": 5, "balance": "+10" },
+                { "player": "Anjo", "matches": 5, "wins": 4, "balance": "+6" },
+                { "player": "Torzinho", "matches": 5, "wins": 2, "balance": "-1" },
+                { "player": "Warley", "matches": 5, "wins": 2, "balance": "-2" },
+                { "player": "Jean Medeiros", "matches": 5, "wins": 1, "balance": "-5" },
+                { "player": "Rafael", "matches": 5, "wins": 1, "balance": "-8" }
+              ]
+            },
+            {
+              "name": "Grupo B",
+              "standings": [
+                { "player": "Abner", "matches": 5, "wins": 5, "balance": "+9" },
+                { "player": "Dean", "matches": 5, "wins": 4, "balance": "+7" },
+                { "player": "David", "matches": 5, "wins": 1, "balance": "-8" },
+                { "player": "Kelvyn", "matches": 3, "wins": 1, "balance": "-2", "note": "Suspensa" },
+                { "player": "João", "matches": 3, "wins": 1, "balance": "+3", "note": "Suspensa" },
+                { "player": "Douglas", "matches": 3, "wins": 0, "balance": "-9", "note": "Suspensa" }
+              ]
+            }
+          ],
+          "matches": [
+            { "player1": "Anjo", "player2": "Warley", "score1": "3", "score2": "1", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Rafael", "score1": "3", "score2": "0", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Jean Medeiros", "score1": "3", "score2": "1", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Torzinho", "score1": "3", "score2": "2", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Tebas", "score1": "1", "score2": "3", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Warley", "player2": "Rafael", "score1": "3", "score2": "2", "state": "complete", "winner": "Warley", "youtube_url": "" },
+            { "player1": "Warley", "player2": "Jean Medeiros", "score1": "2", "score2": "3", "state": "complete", "winner": "Jean Medeiros", "youtube_url": "" },
+            { "player1": "Warley", "player2": "Torzinho", "score1": "3", "score2": "0", "state": "complete", "winner": "Warley", "youtube_url": "" },
+            { "player1": "Warley", "player2": "Tebas", "score1": "0", "score2": "3", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Rafael", "player2": "Jean Medeiros", "score1": "3", "score2": "1", "state": "complete", "winner": "Rafael", "youtube_url": "" },
+            { "player1": "Rafael", "player2": "Torzinho", "score1": "0", "score2": "3", "state": "complete", "winner": "Torzinho", "youtube_url": "" },
+            { "player1": "Rafael", "player2": "Tebas", "score1": "0", "score2": "3", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Jean Medeiros", "player2": "Torzinho", "score1": "2", "score2": "3", "state": "complete", "winner": "Torzinho", "youtube_url": "" },
+            { "player1": "Jean Medeiros", "player2": "Tebas", "score1": "2", "score2": "3", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Torzinho", "player2": "Tebas", "score1": "2", "score2": "3", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "David", "player2": "Dean", "score1": "1", "score2": "3", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "David", "player2": "Kelvyn", "score1": "2", "score2": "3", "state": "complete", "winner": "Kelvyn", "youtube_url": "" },
+            { "player1": "David", "player2": "Abner", "score1": "0", "score2": "3", "state": "complete", "winner": "Abner", "youtube_url": "" },
+            { "player1": "David", "player2": "Douglas", "score1": "3", "score2": "2", "state": "complete", "winner": "David", "youtube_url": "" },
+            { "player1": "David", "player2": "João", "score1": "0", "score2": "3", "state": "complete", "winner": "João", "youtube_url": "" },
+            { "player1": "Dean", "player2": "Kelvyn", "score1": "1", "score2": "0", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Dean", "player2": "Abner", "score1": "1", "score2": "3", "state": "complete", "winner": "Abner", "youtube_url": "" },
+            { "player1": "Dean", "player2": "Douglas", "score1": "3", "score2": "0", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Dean", "player2": "João", "score1": "3", "score2": "0", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Kelvyn", "player2": "Abner", "score1": "1", "score2": "3", "state": "complete", "winner": "Abner", "youtube_url": "" },
+            { "player1": "Kelvyn", "player2": "Douglas", "score1": "0", "score2": "0", "state": "open", "winner": "", "note": "Suspensa", "youtube_url": "" },
+            { "player1": "Kelvyn", "player2": "João", "score1": "0", "score2": "0", "state": "open", "winner": "", "note": "Suspensa", "youtube_url": "" },
+            { "player1": "Abner", "player2": "Douglas", "score1": "1", "score2": "0", "state": "complete", "winner": "Abner", "note": "W.O", "youtube_url": "" },
+            { "player1": "Abner", "player2": "João", "score1": "1", "score2": "0", "state": "complete", "winner": "Abner", "note": "W.O", "youtube_url": "" },
+            { "player1": "Douglas", "player2": "João", "score1": "0", "score2": "0", "state": "open", "winner": "", "note": "Suspensa", "youtube_url": "" }
+          ]
+        },
+        {
+          "name": "Fase Final (MD9)",
+          "type": "final",
+          "description": "Os 3 melhores de cada grupo. Todos contra todos em Melhor de 9 - vence quem ganhar 5 duelos.",
+          "matches": [
+            { "player1": "Tebas", "player2": "Anjo", "score1": "4", "score2": "5", "state": "complete", "winner": "Anjo", "note": "MD9", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Torzinho", "score1": "5", "score2": "3", "state": "complete", "winner": "Tebas", "note": "MD9", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Abner", "score1": "3", "score2": "5", "state": "complete", "winner": "Abner", "note": "MD9", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Dean", "score1": "1", "score2": "5", "state": "complete", "winner": "Dean", "note": "MD9", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "David", "score1": "5", "score2": "0", "state": "complete", "winner": "Tebas", "note": "MD9", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Torzinho", "score1": "5", "score2": "3", "state": "complete", "winner": "Anjo", "note": "MD9", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Abner", "score1": "3", "score2": "5", "state": "complete", "winner": "Abner", "note": "MD9", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Dean", "score1": "4", "score2": "5", "state": "complete", "winner": "Dean", "note": "MD9", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "David", "score1": "5", "score2": "3", "state": "complete", "winner": "Anjo", "note": "MD9", "youtube_url": "" },
+            { "player1": "Torzinho", "player2": "Abner", "score1": "0", "score2": "1", "state": "complete", "winner": "Abner", "note": "W.O", "youtube_url": "" },
+            { "player1": "Torzinho", "player2": "Dean", "score1": "1", "score2": "5", "state": "complete", "winner": "Dean", "note": "MD9", "youtube_url": "" },
+            { "player1": "Torzinho", "player2": "David", "score1": "0", "score2": "5", "state": "complete", "winner": "David", "note": "MD9", "youtube_url": "" },
+            { "player1": "Abner", "player2": "Dean", "score1": "5", "score2": "2", "state": "complete", "winner": "Abner", "note": "MD9", "youtube_url": "" },
+            { "player1": "Abner", "player2": "David", "score1": "5", "score2": "4", "state": "complete", "winner": "Abner", "note": "MD9", "youtube_url": "" },
+            { "player1": "Dean", "player2": "David", "score1": "5", "score2": "3", "state": "complete", "winner": "Dean", "note": "MD9", "youtube_url": "" }
+          ],
+          "final_match": { "player1": "Dean", "player2": "Abner", "score1": "5", "score2": "1", "state": "complete", "winner": "Dean", "note": "MD9 - Grande Final", "youtube_url": "" },
+          "standings": [
+            { "position": 1, "player": "Dean", "matches": 6, "wins": 5, "balance": "+9" },
+            { "position": 2, "player": "Abner", "matches": 6, "wins": 4, "balance": "+5" },
+            { "position": 3, "player": "Anjo", "matches": 5, "wins": 3, "balance": "+2" },
+            { "position": 4, "player": "Tebas", "matches": 5, "wins": 2, "balance": "0" },
+            { "position": 5, "player": "David", "matches": 5, "wins": 1, "balance": "-14" },
+            { "position": 6, "player": "Torzinho", "matches": 5, "wins": 0, "balance": "-8" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ed2",
+      "name": "2ª Edição - Agosto 2025",
+      "description": "Campeonato Legend Online X1 - Fase de Grupos",
+      "challonge_url": "",
+      "phases": [
+        {
+          "name": "Fase de Grupos",
+          "type": "groups",
+          "groups": [
+            {
+              "name": "Grupo A",
+              "standings": [
+                { "player": "Tebas", "matches": 5, "wins": 4, "balance": "+4" },
+                { "player": "Will", "matches": 5, "wins": 3, "balance": "+3" },
+                { "player": "Jean", "matches": 4, "wins": 3, "balance": "+2" },
+                { "player": "Foras Pai", "matches": 5, "wins": 2, "balance": "-2" },
+                { "player": "Tor", "matches": 4, "wins": 1, "balance": "-1" },
+                { "player": "Maycão", "matches": 3, "wins": 0, "balance": "-6" }
+              ]
+            },
+            {
+              "name": "Grupo B",
+              "standings": [
+                { "player": "Dean", "matches": 5, "wins": 4, "balance": "+5" },
+                { "player": "Anjo", "matches": 4, "wins": 3, "balance": "+4" },
+                { "player": "David", "matches": 5, "wins": 3, "balance": "0" },
+                { "player": "Jow", "matches": 4, "wins": 1, "balance": "-2" },
+                { "player": "Guerra", "matches": 2, "wins": 0, "balance": "-2" },
+                { "player": "Foras Filho", "matches": 4, "wins": 1, "balance": "-5" }
+              ]
+            }
+          ],
+          "matches": [
+            { "player1": "Jean", "player2": "Tebas", "score1": "2", "score2": "0", "state": "complete", "winner": "Jean", "youtube_url": "" },
+            { "player1": "Jean", "player2": "Foras Pai", "score1": "0", "score2": "2", "state": "complete", "winner": "Foras Pai", "youtube_url": "" },
+            { "player1": "Jean", "player2": "Will", "score1": "2", "score2": "1", "state": "complete", "winner": "Jean", "youtube_url": "" },
+            { "player1": "Jean", "player2": "Tor", "score1": "2", "score2": "1", "state": "complete", "winner": "Jean", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Will", "score1": "2", "score2": "1", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Tor", "score1": "2", "score2": "1", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Foras Pai", "score1": "2", "score2": "0", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Tebas", "player2": "Maycão", "score1": "2", "score2": "0", "state": "complete", "winner": "Tebas", "youtube_url": "" },
+            { "player1": "Will", "player2": "Foras Pai", "score1": "2", "score2": "0", "state": "complete", "winner": "Will", "youtube_url": "" },
+            { "player1": "Will", "player2": "Tor", "score1": "2", "score2": "1", "state": "complete", "winner": "Will", "youtube_url": "" },
+            { "player1": "Will", "player2": "Maycão", "score1": "2", "score2": "0", "state": "complete", "winner": "Will", "youtube_url": "" },
+            { "player1": "Tor", "player2": "Foras Pai", "score1": "2", "score2": "0", "state": "complete", "winner": "Tor", "youtube_url": "" },
+            { "player1": "Foras Pai", "player2": "Maycão", "score1": "2", "score2": "0", "state": "complete", "winner": "Foras Pai", "youtube_url": "" },
+            { "player1": "Jean", "player2": "Maycão", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "player1": "Tor", "player2": "Maycão", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "player1": "Dean", "player2": "Jow", "score1": "2", "score2": "1", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Dean", "player2": "Guerra", "score1": "2", "score2": "1", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Dean", "player2": "David", "score1": "2", "score2": "0", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Dean", "player2": "Foras Filho", "score1": "2", "score2": "0", "state": "complete", "winner": "Dean", "youtube_url": "" },
+            { "player1": "Foras Filho", "player2": "Anjo", "score1": "2", "score2": "1", "state": "complete", "winner": "Foras Filho", "youtube_url": "" },
+            { "player1": "Foras Filho", "player2": "David", "score1": "0", "score2": "2", "state": "complete", "winner": "David", "youtube_url": "" },
+            { "player1": "David", "player2": "Anjo", "score1": "0", "score2": "2", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "David", "player2": "Guerra", "score1": "2", "score2": "1", "state": "complete", "winner": "David", "youtube_url": "" },
+            { "player1": "David", "player2": "Jow", "score1": "2", "score2": "1", "state": "complete", "winner": "David", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Dean", "score1": "2", "score2": "1", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "Anjo", "player2": "Jow", "score1": "2", "score2": "0", "state": "complete", "winner": "Anjo", "youtube_url": "" },
+            { "player1": "Jow", "player2": "Foras Filho", "score1": "2", "score2": "0", "state": "complete", "winner": "Jow", "youtube_url": "" },
+            { "player1": "Guerra", "player2": "Anjo", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "player1": "Guerra", "player2": "Foras Filho", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "player1": "Guerra", "player2": "David", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "player1": "Guerra", "player2": "Jow", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ed4",
+      "name": "4ª Edição - Redition 2026",
+      "description": "CDX - 4ª Edição Redition - Eliminação simples com fase de grupos (14 jogadores)",
+      "challonge_url": "https://challonge.com/pt_BR/4y7eas8p",
+      "phases": [
+        {
+          "name": "Fase de Grupos (Round Robin)",
+          "type": "round_robin",
+          "matches": [
+            { "round": 1, "player1": "Kauan", "player2": "Anderson", "score1": "4", "score2": "3", "state": "complete", "winner": "Kauan", "youtube_url": "" },
+            { "round": 1, "player1": "Rafael", "player2": "Abner", "score1": "4", "score2": "2", "state": "complete", "winner": "Rafael", "youtube_url": "" },
+            { "round": 1, "player1": "Jean", "player2": "Wesley", "score1": "4", "score2": "0", "state": "complete", "winner": "Jean", "youtube_url": "" },
+            { "round": 1, "player1": "Emerson", "player2": "Bruno", "score1": "4", "score2": "2", "state": "complete", "winner": "Emerson", "youtube_url": "" },
+            { "round": 1, "player1": "Douglas", "player2": "Lucas", "score1": "1", "score2": "4", "state": "complete", "winner": "Lucas", "youtube_url": "" },
+            { "round": 1, "player1": "Gilvan", "player2": "Pedro", "score1": "4", "score2": "3", "state": "complete", "winner": "Gilvan", "youtube_url": "" },
+            { "round": 1, "player1": "Nicolas", "player2": "Matheus", "score1": "4", "score2": "3", "state": "complete", "winner": "Nicolas", "youtube_url": "" },
+            { "round": 2, "player1": "Anderson", "player2": "Rafael", "score1": "4", "score2": "1", "state": "complete", "winner": "Anderson", "youtube_url": "" },
+            { "round": 2, "player1": "Abner", "player2": "Jean", "score1": "4", "score2": "1", "state": "complete", "winner": "Abner", "youtube_url": "" },
+            { "round": 2, "player1": "Wesley", "player2": "Emerson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 2, "player1": "Bruno", "player2": "Douglas", "score1": "4", "score2": "0", "state": "complete", "winner": "Bruno", "youtube_url": "" },
+            { "round": 2, "player1": "Lucas", "player2": "Gilvan", "score1": "4", "score2": "2", "state": "complete", "winner": "Lucas", "youtube_url": "" },
+            { "round": 2, "player1": "Pedro", "player2": "Nicolas", "score1": "4", "score2": "2", "state": "complete", "winner": "Pedro", "youtube_url": "" },
+            { "round": 2, "player1": "Matheus", "player2": "Kauan", "score1": "2", "score2": "4", "state": "complete", "winner": "Kauan", "youtube_url": "" },
+            { "round": 3, "player1": "Rafael", "player2": "Jean", "score1": "4", "score2": "3", "state": "complete", "winner": "Rafael", "youtube_url": "" },
+            { "round": 3, "player1": "Abner", "player2": "Emerson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 3, "player1": "Wesley", "player2": "Bruno", "score1": "4", "score2": "3", "state": "complete", "winner": "Wesley", "youtube_url": "" },
+            { "round": 3, "player1": "Douglas", "player2": "Gilvan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 3, "player1": "Lucas", "player2": "Pedro", "score1": "4", "score2": "2", "state": "complete", "winner": "Lucas", "youtube_url": "" },
+            { "round": 3, "player1": "Nicolas", "player2": "Kauan", "score1": "1", "score2": "4", "state": "complete", "winner": "Kauan", "youtube_url": "" },
+            { "round": 3, "player1": "Matheus", "player2": "Anderson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 4, "player1": "Abner", "player2": "Wesley", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 4, "player1": "Jean", "player2": "Bruno", "score1": "2", "score2": "4", "state": "complete", "winner": "Bruno", "youtube_url": "" },
+            { "round": 4, "player1": "Emerson", "player2": "Douglas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 4, "player1": "Gilvan", "player2": "Nicolas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 4, "player1": "Pedro", "player2": "Matheus", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 4, "player1": "Kauan", "player2": "Rafael", "score1": "4", "score2": "3", "state": "complete", "winner": "Kauan", "youtube_url": "" },
+            { "round": 4, "player1": "Anderson", "player2": "Lucas", "score1": "0", "score2": "4", "state": "complete", "winner": "Lucas", "youtube_url": "" },
+            { "round": 5, "player1": "Jean", "player2": "Douglas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 5, "player1": "Wesley", "player2": "Gilvan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 5, "player1": "Bruno", "player2": "Pedro", "score1": "4", "score2": "1", "state": "complete", "winner": "Bruno", "youtube_url": "" },
+            { "round": 5, "player1": "Emerson", "player2": "Nicolas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 5, "player1": "Kauan", "player2": "Abner", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 5, "player1": "Anderson", "player2": "Matheus", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 5, "player1": "Lucas", "player2": "Rafael", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 6, "player1": "Gilvan", "player2": "Lucas", "score1": "3", "score2": "4", "state": "complete", "winner": "Lucas", "youtube_url": "" },
+            { "round": 6, "player1": "Rafael", "player2": "Jean", "score1": "4", "score2": "2", "state": "complete", "winner": "Rafael", "youtube_url": "" },
+            { "round": 6, "player1": "Pedro", "player2": "Kauan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 6, "player1": "Matheus", "player2": "Emerson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 6, "player1": "Nicolas", "player2": "Wesley", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 6, "player1": "Douglas", "player2": "Abner", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 6, "player1": "Anderson", "player2": "Bruno", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 7, "player1": "Gilvan", "player2": "Nicolas", "score1": "2", "score2": "4", "state": "complete", "winner": "Nicolas", "youtube_url": "" },
+            { "round": 7, "player1": "Emerson", "player2": "Rafael", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 7, "player1": "Abner", "player2": "Anderson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 7, "player1": "Wesley", "player2": "Kauan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 7, "player1": "Bruno", "player2": "Pedro", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 7, "player1": "Douglas", "player2": "Matheus", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 7, "player1": "Lucas", "player2": "Jean", "score1": "2", "score2": "4", "state": "complete", "winner": "Jean", "youtube_url": "" },
+            { "round": 8, "player1": "Jean", "player2": "Emerson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 8, "player1": "Matheus", "player2": "Gilvan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 8, "player1": "Pedro", "player2": "Douglas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 8, "player1": "Kauan", "player2": "Bruno", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 8, "player1": "Anderson", "player2": "Wesley", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 8, "player1": "Rafael", "player2": "Abner", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 8, "player1": "Nicolas", "player2": "Lucas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 9, "player1": "Gilvan", "player2": "Pedro", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 9, "player1": "Abner", "player2": "Jean", "score1": "2", "score2": "4", "state": "complete", "winner": "Jean", "youtube_url": "" },
+            { "round": 9, "player1": "Wesley", "player2": "Rafael", "score1": "1", "score2": "4", "state": "complete", "winner": "Rafael", "youtube_url": "" },
+            { "round": 9, "player1": "Bruno", "player2": "Anderson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 9, "player1": "Douglas", "player2": "Kauan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 9, "player1": "Lucas", "player2": "Emerson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 9, "player1": "Nicolas", "player2": "Matheus", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 10, "player1": "Rafael", "player2": "Bruno", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 10, "player1": "Pedro", "player2": "Nicolas", "score1": "4", "score2": "1", "state": "complete", "winner": "Pedro", "youtube_url": "" },
+            { "round": 10, "player1": "Kauan", "player2": "Gilvan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 10, "player1": "Anderson", "player2": "Douglas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 10, "player1": "Matheus", "player2": "Lucas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 10, "player1": "Jean", "player2": "Wesley", "score1": "2", "score2": "4", "state": "complete", "winner": "Wesley", "youtube_url": "" },
+            { "round": 10, "player1": "Emerson", "player2": "Abner", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 11, "player1": "Douglas", "player2": "Rafael", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 11, "player1": "Wesley", "player2": "Emerson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 11, "player1": "Bruno", "player2": "Jean", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 11, "player1": "Lucas", "player2": "Abner", "score1": "2", "score2": "4", "state": "complete", "winner": "Abner", "youtube_url": "" },
+            { "round": 11, "player1": "Gilvan", "player2": "Anderson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 11, "player1": "Nicolas", "player2": "Kauan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 11, "player1": "Matheus", "player2": "Pedro", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 12, "player1": "Anderson", "player2": "Nicolas", "score1": "4", "score2": "1", "state": "complete", "winner": "Anderson", "youtube_url": "" },
+            { "round": 12, "player1": "Kauan", "player2": "Matheus", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 12, "player1": "Pedro", "player2": "Lucas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 12, "player1": "Rafael", "player2": "Gilvan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 12, "player1": "Jean", "player2": "Douglas", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 12, "player1": "Emerson", "player2": "Bruno", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 12, "player1": "Abner", "player2": "Wesley", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 13, "player1": "Bruno", "player2": "Abner", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 13, "player1": "Lucas", "player2": "Wesley", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 13, "player1": "Douglas", "player2": "Emerson", "score1": "0", "score2": "3", "state": "complete", "winner": "Emerson", "youtube_url": "" },
+            { "round": 13, "player1": "Gilvan", "player2": "Jean", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 13, "player1": "Nicolas", "player2": "Rafael", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 13, "player1": "Matheus", "player2": "Anderson", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" },
+            { "round": 13, "player1": "Pedro", "player2": "Kauan", "score1": "", "score2": "", "state": "open", "winner": "", "youtube_url": "" }
+          ]
+        }
+      ]
+    }
+  ]
+}

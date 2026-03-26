@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campeonato Legend Online</title>
+  <title>CDX - Campeonato Legend Online</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Barra de Navegação -->
   <nav class="navbar">
     <div class="container">
       <div class="navbar-content">
         <div class="tournament-selector">
-          <select id="tournament-select" class="tournament-select">
-            <option value="july">Edição Julho 2025</option>
-            <option value="august" selected>Edição Agosto 2025</option>
+          <select id="edition-select" class="tournament-select">
+            <!-- Populado dinamicamente pelo scripts.js -->
           </select>
         </div>
         <div class="social-links">
@@ -30,555 +30,63 @@
       </div>
     </div>
   </nav>
-  
-  <!-- Hero Section with Parallax -->
+
+  <!-- Hero Section com Parallax -->
   <section class="hero">
     <div class="parallax-bg" style="background-image: url('poster.png');"></div>
-    
-    <!-- SVG Parallax Elements -->
     <div class="svg-parallax"></div>
     <div class="hero-content">
-      
-      <div id="july-hero" class="tournament-hero">
-        <h1 class="hero-title">Campeonato Legend Online X1 - Edição Julho</h1>
-        <p class="hero-subtitle">Competição oficial de Legend Online - 2025</p>
-        <a href="#tabs" class="hero-cta">Ver Partidas <i class="fas fa-arrow-right ml-2"></i></a>
-      </div>
-      
-      <div id="august-hero" class="tournament-hero active">
-        <h1 class="hero-title">Campeonato Legend Online X1 - Edição Agosto</h1>
-        <p class="hero-subtitle">Competição oficial de Legend Online - 2025</p>
-        <a href="#tabs" class="hero-cta">Ver Partidas <i class="fas fa-arrow-right ml-2"></i></a>
-      </div>
+      <h1 id="hero-title" class="hero-title">Campeonato Legend Online</h1>
+      <p id="hero-subtitle" class="hero-subtitle">Competição oficial de Legend Online</p>
+      <a href="#content" class="hero-cta">Ver Lutas <i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
-      <!-- Tabs Section -->
-  <section id="tabs" class="tabs-section">
+  <!-- Conteúdo Principal - Renderizado dinamicamente -->
+  <section id="content" class="tabs-section">
     <div class="container">
-      <div id="july-tournament" class="tournament-content">
-        <div class="tabs-container animate-on-scroll">
-          <div class="tab-buttons">
-            <button class="tab-button" data-tab="faltando"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
-            <button class="tab-button" data-tab="realizadas"><i class="fas fa-check-circle"></i> Partidas Realizadas</button>
-            <button class="tab-button" data-tab="classificados"><i class="fas fa-chart-line"></i> Classificação</button>
-            <button class="tab-button active" data-tab="fase2"><i class="fas fa-trophy"></i> Fase 2</button>
-            <button class="tab-button" data-tab="jogadores"><i class="fas fa-users"></i> Jogadores</button>
-          </div>
 
-              <div id="faltando" class="tab-content">
-          <h2 class="group-title group-a"><i class="fas fa-users"></i> Grupo A - Partidas Faltando</h2>
-          <ul class="match-list group-a-matches">
-            <!-- Todas as partidas do Grupo A foram realizadas -->
-            <li><i class="fas fa-check-circle text-green-600"></i> Todas as partidas foram realizadas!</li>
-          </ul>
-
-          <h2 class="group-title group-b"><i class="fas fa-users"></i> Grupo B - Partidas Faltando</h2>
-          <ul class="match-list group-b-matches">
-            <!-- Todas as partidas do Grupo B foram realizadas -->
-            <li><i class="fas fa-check-circle text-green-600"></i> Todas as partidas foram realizadas!</li>
-          </ul>
+      <!-- Tabs: Realizadas / Pendentes / Classificação -->
+      <div class="tabs-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" data-tab="tab-realizadas"><i class="fas fa-check-circle"></i> Lutas Realizadas</button>
+          <button class="tab-button" data-tab="tab-pendentes"><i class="fas fa-clock"></i> Lutas Pendentes</button>
+          <button class="tab-button" data-tab="tab-classificacao"><i class="fas fa-chart-line"></i> Classificação</button>
         </div>
 
-              <div id="realizadas" class="tab-content">
-          <h2 class="group-title"><i class="fas fa-check-double"></i> Resultados Confirmados</h2>
-          <ul class="match-list">
-            <!-- Grupo A -->
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">1</span> Warley</li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">0</span> Rafael</li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">1</span> Jean Medeiros</li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">2</span> Torzinho</li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">3</span> Tebas</li>
-            <li><i class="fas fa-trophy"></i> Warley <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">2</span> Rafael</li>
-            <li><i class="fas fa-trophy"></i> Warley <span class="font-bold text-red-600">2</span> x <span class="font-bold text-green-600">3</span> Jean Medeiros</li>
-            <li><i class="fas fa-trophy"></i> Warley <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">0</span> Torzinho</li>
-            <li><i class="fas fa-trophy"></i> Warley <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">3</span> Tebas</li>
-            <li><i class="fas fa-trophy"></i> Rafael <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">1</span> Jean Medeiros</li>
-            <li><i class="fas fa-trophy"></i> Rafael <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">3</span> Torzinho</li>
-            <li><i class="fas fa-trophy"></i> Rafael <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">3</span> Tebas</li>
-            <li><i class="fas fa-trophy"></i> Jean Medeiros <span class="font-bold text-red-600">2</span> x <span class="font-bold text-green-600">3</span> Torzinho</li>
-            <li><i class="fas fa-trophy"></i> Jean Medeiros <span class="font-bold text-red-600">2</span> x <span class="font-bold text-green-600">3</span> Tebas</li>
-            <li><i class="fas fa-trophy"></i> Torzinho <span class="font-bold text-red-600">2</span> x <span class="font-bold text-green-600">3</span> Tebas</li>
-            <!-- Grupo B -->
-            <li><i class="fas fa-trophy"></i> David <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">3</span> Dean</li>
-            <li><i class="fas fa-trophy"></i> David <span class="font-bold text-red-600">2</span> x <span class="font-bold text-green-600">3</span> Kelvyn</li>
-            <li><i class="fas fa-trophy"></i> David <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">3</span> Abner</li>
-            <li><i class="fas fa-trophy"></i> David <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">2</span> Douglas</li>
-            <li><i class="fas fa-trophy"></i> David <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">3</span> João</li>
-            <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">1</span> x <span class="font-bold text-red-600">0</span> Kelvyn</li>
-            <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">3</span> Abner</li>
-            <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">0</span> Douglas</li>
-            <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">3</span> x <span class="font-bold text-red-600">0</span> João</li>
-            <li><i class="fas fa-trophy"></i> Kelvyn <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">3</span> Abner</li>
-            <li><i class="fas fa-trophy"></i> Kelvyn <span class="font-bold text-gray-600">0</span> x <span class="font-bold text-gray-600">0</span> Douglas <span class="text-sm italic">(Suspensa)</span></li>
-            <li><i class="fas fa-trophy"></i> Kelvyn <span class="font-bold text-gray-600">0</span> x <span class="font-bold text-gray-600">0</span> João <span class="text-sm italic">(Suspensa)</span></li>
-            <li><i class="fas fa-trophy"></i> Abner <span class="font-bold text-green-600">1</span> x <span class="font-bold text-red-600">0</span> Douglas <span class="text-sm italic">(W.O)</span></li>
-            <li><i class="fas fa-trophy"></i> Abner <span class="font-bold text-green-600">1</span> x <span class="font-bold text-red-600">0</span> João <span class="text-sm italic">(W.O)</span></li>
-            <li><i class="fas fa-trophy"></i> Douglas <span class="font-bold text-gray-600">0</span> x <span class="font-bold text-gray-600">0</span> João <span class="text-sm italic">(Suspensa)</span></li>
-          </ul>
+        <!-- Tab: Lutas Realizadas -->
+        <div id="tab-realizadas" class="tab-content active">
+          <div id="matches-complete"></div>
         </div>
 
-              <div id="classificados" class="tab-content">
-          <h2 class="group-title"><i class="fas fa-chart-line"></i> Tabela de Classificação</h2>
-          <p class="text-sm italic mb-4">*Classificação parcial com base nas partidas realizadas.</p>
-
-          <!-- Grupo A -->
-          <h3 class="group-title group-a"><i class="fas fa-users"></i> Grupo A</h3>
-          <div class="overflow-x-auto">
-            <table class="standings-table">
-              <thead>
-                <tr>
-                  <th><i class="fas fa-user"></i> Jogador</th>
-                  <th><i class="fas fa-gamepad"></i> Partidas</th>
-                  <th><i class="fas fa-trophy"></i> Vitórias</th>
-                  <th><i class="fas fa-chart-bar"></i> Saldo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Tebas</td><td>5</td><td>5</td><td class="text-green-600 font-bold">+10</td></tr>
-                <tr><td>Anjo</td><td>5</td><td>4</td><td class="text-green-600 font-bold">+6</td></tr>
-                <tr><td>Torzinho</td><td>5</td><td>2</td><td class="text-red-600 font-bold">-1</td></tr>
-                <tr><td>Warley</td><td>5</td><td>2</td><td class="text-red-600 font-bold">-2</td></tr>
-                <tr><td>Jean Medeiros</td><td>5</td><td>1</td><td class="text-red-600 font-bold">-5</td></tr>
-                <tr><td>Rafael</td><td>5</td><td>1</td><td class="text-red-600 font-bold">-8</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Grupo B -->
-          <h3 class="group-title group-b mt-6"><i class="fas fa-users"></i> Grupo B</h3>
-          <div class="overflow-x-auto">
-            <table class="standings-table">
-              <thead>
-                <tr>
-                  <th><i class="fas fa-user"></i> Jogador</th>
-                  <th><i class="fas fa-gamepad"></i> Partidas</th>
-                  <th><i class="fas fa-trophy"></i> Vitórias</th>
-                  <th><i class="fas fa-chart-bar"></i> Saldo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Abner</td><td>5</td><td>5</td><td class="text-green-600 font-bold">+9</td></tr>
-                <tr><td>Dean</td><td>5</td><td>4</td><td class="text-green-600 font-bold">+7</td></tr>
-                <tr><td>David</td><td>5</td><td>1</td><td class="text-red-600 font-bold">-8</td></tr>
-                <tr><td>Kelvyn <span class="text-sm italic text-gray-500">(Suspensa)</span></td><td>3</td><td>1</td><td class="text-red-600 font-bold">-2</td></tr>
-                <tr><td>João <span class="text-sm italic text-gray-500">(Suspensa)</span></td><td>3</td><td>1</td><td class="text-green-600 font-bold">+3</td></tr>
-                <tr><td>Douglas <span class="text-sm italic text-gray-500">(Suspensa)</span></td><td>3</td><td>0</td><td class="text-red-600 font-bold">-9</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        
-        <div id="fase2" class="tab-content active">
-          <div class="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-4 rounded-lg mb-8 shadow-lg">
-            <h2 class="text-xl font-bold"><i class="fas fa-trophy"></i> Fase 2 - Grupo Final (MD9)</h2>
-            <ul class="list-disc pl-6 mt-2">
-              <li>Os 3 melhores de cada grupo formam um novo grupo de 6 jogadores.</li>
-              <li>Todos contra todos novamente, mas agora em Melhor de 9 (MD9) → vence quem ganhar 5 duelos.</li>
-            </ul>
-          </div>
-          
-          <h2 class="group-title"><i class="fas fa-users"></i> Jogadores Classificados</h2>
-          <div class="overflow-x-auto mb-8">
-            <table class="standings-table">
-              <thead>
-                <tr>
-                  <th><i class="fas fa-user"></i> Jogador</th>
-                  <th><i class="fas fa-users"></i> Grupo Original</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Tebas</td><td class="text-blue-600 font-bold">Grupo A</td></tr>
-                <tr><td>Anjo</td><td class="text-blue-600 font-bold">Grupo A</td></tr>
-                <tr><td>Torzinho</td><td class="text-blue-600 font-bold">Grupo A</td></tr>
-                <tr><td>Abner</td><td class="text-green-600 font-bold">Grupo B</td></tr>
-                <tr><td>Dean</td><td class="text-green-600 font-bold">Grupo B</td></tr>
-                <tr><td>David</td><td class="text-green-600 font-bold">Grupo B</td></tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <h2 class="group-title"><i class="fas fa-clipboard-list"></i> Partidas da Fase Final (MD9)</h2>
-          <p class="text-sm italic mb-4">*Melhor de 9 - Vence quem ganhar 5 duelos.</p>
-          
-          <ul class="match-list">
-            <!-- Tebas matches -->
-            <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-red-600">4</span> x <span class="font-bold text-green-600">5</span> Anjo <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> Torzinho <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-red-600">3</span> x <span class="font-bold text-green-600">5</span> Abner <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">5</span> Dean <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">0</span> David <span class="text-sm italic">(MD9)</span></li>
-            
-            <!-- Anjo matches -->
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> Tor <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-red-600">3</span> x <span class="font-bold text-green-600">5</span> Abner <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-red-600">4</span> x <span class="font-bold text-green-600">5</span> Dean <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> David <span class="text-sm italic">(MD9)</span></li>
-            
-            <!-- Torzinho matches -->
-            <li><i class="fas fa-trophy"></i> Tor <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">1</span> Abner <span class="text-sm italic">(W.O)</span></li>
-            <li><i class="fas fa-trophy"></i> Tor <span class="font-bold text-red-600">1</span> x <span class="font-bold text-green-600">5</span> Dean <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Torzinho <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">5</span> David <span class="text-sm italic">(MD9)</span></li>
-            
-            <!-- Abner matches -->
-            <li><i class="fas fa-trophy"></i> Abner <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">2</span> Dean <span class="text-sm italic">(MD9)</span></li>
-            <li><i class="fas fa-trophy"></i> Abner <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">4</span> David <span class="text-sm italic">(MD9)</span></li>
-            
-            <!-- Dean matches -->
-            <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">3</span> David <span class="text-sm italic">(MD9)</span></li>
-          </ul>
-          
-          <h2 class="group-title mt-8"><i class="fas fa-trophy text-yellow-500"></i> Grande Final</h2>
-          <ul class="match-list">
-            <li><i class="fas fa-crown text-yellow-500"></i> Dean <span class="font-bold text-green-600">5</span> x <span class="font-bold text-red-600">1</span> Abner <span class="text-sm italic">(MD9)</span></li>
-          </ul>
-
-          <h2 class="group-title mt-8"><i class="fas fa-chart-line"></i> Classificação Final</h2>
-          <p class="text-sm italic mb-4">*Classificação final do campeonato.</p>
-          
-          <div class="overflow-x-auto">
-            <table class="standings-table">
-              <thead>
-                <tr>
-                  <th><i class="fas fa-user"></i> Jogador</th>
-                  <th><i class="fas fa-gamepad"></i> Partidas</th>
-                  <th><i class="fas fa-trophy"></i> Vitórias</th>
-                  <th><i class="fas fa-chart-bar"></i> Saldo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-yellow-100"><td><span class="font-bold text-yellow-600">1º</span> Dean</td><td>6</td><td>5</td><td>+9</td></tr>
-                <tr class="bg-gray-100"><td><span class="font-bold text-gray-600">2º</span> Abner</td><td>6</td><td>4</td><td>+5</td></tr>
-                <tr><td><span class="font-bold">3º</span> Anjo</td><td>5</td><td>3</td><td>+2</td></tr>
-                <tr><td><span class="font-bold">4º</span> Tebas</td><td>5</td><td>2</td><td>0</td></tr>
-                <tr><td><span class="font-bold">5º</span> David</td><td>5</td><td>1</td><td>-14</td></tr>
-                <tr><td><span class="font-bold">6º</span> Tor</td><td>5</td><td>0</td><td>-8</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <!-- Tab: Lutas Pendentes -->
+        <div id="tab-pendentes" class="tab-content">
+          <div id="matches-pending"></div>
         </div>
 
-        <div id="jogadores" class="tab-content">
-          <h2 class="group-title"><i class="fas fa-users"></i> Jogadores e Disponibilidade</h2>
-          <p class="text-sm italic mb-4">*Informações sobre classe e horários disponíveis para partidas.</p>
-
-          <!-- Grupo A Players -->
-          <h3 class="group-title group-a"><i class="fas fa-users"></i> Grupo A</h3>
-          <div class="overflow-x-auto">
-            <table class="players-table">
-              <thead>
-                <tr>
-                  <th><i class="fas fa-user"></i> Jogador</th>
-                  <th><i class="fas fa-hat-wizard"></i> Classe</th>
-                  <th><i class="fas fa-clock"></i> Disponibilidade</th>
-                  <th><i class="fas fa-exclamation-circle"></i> Inscrição</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Tebas</td>
-                  <td>Mago</td>
-                  <td>Segunda a Sexta, 20h às 23h</td>
-                  <td><i class="fas fa-check-circle payment-status-paid"></i> Pago</td>
-                </tr>
-                <tr>
-                  <td>Anjo</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-                <tr>
-                  <td>Warley</td>
-                  <td>Guerreiro</td>
-                  <td>Segunda a Sábado, 20h às 22h</td>
-                  <td><i class="fas fa-check-circle payment-status-paid"></i> Pago</td>
-                </tr>
-                <tr>
-                  <td>Rafael</td>
-                  <td>Arqueiro</td>
-                  <td>Segunda a Sexta, 22h às 23h</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-                <tr>
-                  <td>Jean Medeiros</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-                <tr>
-                  <td>Torzinho</td>
-                  <td>-</td>
-                  <td>Qualquer horário</td>
-                  <td><i class="fas fa-check-circle payment-status-paid"></i> Pago</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Grupo B Players -->
-          <h3 class="group-title group-b mt-6"><i class="fas fa-users"></i> Grupo B</h3>
-          <div class="overflow-x-auto">
-            <table class="players-table">
-              <thead>
-                <tr>
-                  <th><i class="fas fa-user"></i> Jogador</th>
-                  <th><i class="fas fa-hat-wizard"></i> Classe</th>
-                  <th><i class="fas fa-clock"></i> Disponibilidade</th>
-                  <th><i class="fas fa-exclamation-circle"></i> Inscrição</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Douglas</td>
-                  <td>Arqueiro</td>
-                  <td>Segunda a Sexta, 22h às 23h</td>
-                  <td><i class="fas fa-check-circle payment-status-paid"></i> Pago</td>
-                </tr>
-                <tr>
-                  <td>David</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-                <tr>
-                  <td>Dean</td>
-                  <td>Arqueiro</td>
-                  <td>Segunda a Sexta, 20h às 22h</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-                <tr>
-                  <td>Kelvyn</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-                <tr>
-                  <td>Abner</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><i class="fas fa-check-circle payment-status-paid"></i> Pago</td>
-                </tr>
-                <tr>
-                  <td>João</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><i class="fas fa-exclamation-circle payment-status-pending"></i> Pendente</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <!-- Tab: Classificação -->
+        <div id="tab-classificacao" class="tab-content">
+          <div id="standings-container"></div>
         </div>
       </div>
+
+      <!-- Link Challonge -->
+      <div id="challonge-link" class="challonge-link" style="display:none;">
+        <a href="" target="_blank" id="challonge-url">
+          <i class="fas fa-external-link-alt"></i> Ver chave completa no Challonge
+        </a>
       </div>
-      
-      <!-- August Tournament Content -->
-      <div id="august-tournament" class="tournament-content active">
-        <div class="tabs-container animate-on-scroll">
-          <div class="tab-buttons">
-            <button class="tab-button" data-tab="faltando-aug"><i class="fas fa-clipboard-list"></i> Partidas Faltando</button>
-            <button class="tab-button" data-tab="realizadas-aug"><i class="fas fa-check-circle"></i> Partidas Realizadas</button>
-            <button class="tab-button active" data-tab="classificados-aug"><i class="fas fa-chart-line"></i> Classificação</button>
-            <button class="tab-button" data-tab="jogadores-aug"><i class="fas fa-users"></i> Jogadores</button>
-          </div>
 
-          <div id="faltando-aug" class="tab-content">
-            <h2 class="group-title group-a"><i class="fas fa-users"></i> Grupo A - Partidas Faltando</h2>
-            <ul class="match-list group-a-matches">
-              <li><i class="fas fa-clock text-yellow-600"></i> Jean x Maycão</li>
-              <li><i class="fas fa-clock text-yellow-600"></i> Tor x Maycão</li>
-            </ul>
-
-            <h2 class="group-title group-b"><i class="fas fa-users"></i> Grupo B - Partidas Faltando</h2>
-            <ul class="match-list group-b-matches">
-              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x Anjo</li>
-              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x Foras Filho</li>
-              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x David</li>
-              <li><i class="fas fa-clock text-yellow-600"></i> Guerra x Jow</li>
-            </ul>
-          </div>
-
-          <div id="realizadas-aug" class="tab-content">
-            <h2 class="group-title"><i class="fas fa-check-double"></i> Resultados Confirmados</h2>
-            <ul class="match-list">
-              <!-- Grupo A -->
-              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Tebas</li>
-              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">2</span> Foras Pai</li>
-              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Will</li>
-              <li><i class="fas fa-trophy"></i> Jean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Tor</li>
-              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Will</li>
-              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Tor</li>
-              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Pai</li>
-              <li><i class="fas fa-trophy"></i> Tebas <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Maycão</li>
-              <li><i class="fas fa-trophy"></i> Will <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Pai</li>
-              <li><i class="fas fa-trophy"></i> Will <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Tor</li>
-              <li><i class="fas fa-trophy"></i> Will <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Maycão</li>
-              <li><i class="fas fa-trophy"></i> Tor <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Pai</li>
-              <li><i class="fas fa-trophy"></i> Foras Pai <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Maycão</li>
-              
-              <!-- Grupo B -->
-              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Jow</li>
-              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Guerra</li>
-              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> David</li>
-              <li><i class="fas fa-trophy"></i> Dean <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Filho</li>
-              <li><i class="fas fa-trophy"></i> Foras Filho <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Anjo</li>
-              <li><i class="fas fa-trophy"></i> Foras Filho <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">2</span> David</li>
-              <li><i class="fas fa-trophy"></i> David <span class="font-bold text-red-600">0</span> x <span class="font-bold text-green-600">2</span> Anjo</li>
-              <li><i class="fas fa-trophy"></i> David <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Guerra</li>
-              <li><i class="fas fa-trophy"></i> David <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Jow</li>
-              <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">1</span> Dean</li>
-              <li><i class="fas fa-trophy"></i> Anjo <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Jow</li>
-              <li><i class="fas fa-trophy"></i> Jow <span class="font-bold text-green-600">2</span> x <span class="font-bold text-red-600">0</span> Foras Filho</li>
-            </ul>
-          </div>
-
-          <div id="classificados-aug" class="tab-content active">
-            <h2 class="group-title"><i class="fas fa-chart-line"></i> Tabela de Classificação</h2>
-            <p class="text-sm italic mb-4">*Classificação parcial com base nas partidas realizadas.</p>
-
-            <!-- Grupo A -->
-            <h3 class="group-title group-a"><i class="fas fa-users"></i> Grupo A</h3>
-            <div class="overflow-x-auto">
-              <table class="standings-table">
-                <thead>
-                  <tr>
-                    <th><i class="fas fa-user"></i> Jogador</th>
-                    <th><i class="fas fa-gamepad"></i> Partidas</th>
-                    <th><i class="fas fa-trophy"></i> Vitórias</th>
-                    <th><i class="fas fa-chart-bar"></i> Saldo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Tebas</td><td>5</td><td>4</td><td class="text-green-600 font-bold">+4</td></tr>
-                  <tr><td>Will</td><td>5</td><td>3</td><td class="text-green-600 font-bold">+3</td></tr>
-                  <tr><td>Jean</td><td>4</td><td>3</td><td class="text-green-600 font-bold">+2</td></tr>
-                  <tr><td>Foras Pai</td><td>5</td><td>2</td><td class="text-red-600 font-bold">-2</td></tr>
-                  <tr><td>Tor</td><td>4</td><td>1</td><td class="text-red-600 font-bold">-1</td></tr>
-                  <tr><td>Maycão</td><td>3</td><td>0</td><td class="text-red-600 font-bold">-6</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Grupo B -->
-            <h3 class="group-title group-b mt-6"><i class="fas fa-users"></i> Grupo B</h3>
-            <div class="overflow-x-auto">
-              <table class="standings-table">
-                <thead>
-                  <tr>
-                    <th><i class="fas fa-user"></i> Jogador</th>
-                    <th><i class="fas fa-gamepad"></i> Partidas</th>
-                    <th><i class="fas fa-trophy"></i> Vitórias</th>
-                    <th><i class="fas fa-chart-bar"></i> Saldo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Dean</td><td>5</td><td>4</td><td class="text-green-600 font-bold">+5</td></tr>
-                  <tr><td>Anjo</td><td>4</td><td>3</td><td class="text-green-600 font-bold">+4</td></tr>
-                  <tr><td>David</td><td>5</td><td>3</td><td class="text-green-600 font-bold">0</td></tr>
-                  <tr><td>Jow</td><td>4</td><td>1</td><td class="text-red-600 font-bold">-2</td></tr>
-                  <tr><td>Guerra</td><td>2</td><td>0</td><td class="text-red-600 font-bold">-2</td></tr>
-                  <tr><td>Foras Filho</td><td>4</td><td>1</td><td class="text-red-600 font-bold">-5</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="jogadores-aug" class="tab-content">
-            <h2 class="group-title"><i class="fas fa-users"></i> Participantes do Campeonato</h2>
-            
-            <h3 class="group-title group-a"><i class="fas fa-users"></i> Grupo A</h3>
-            <div class="players-grid">
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Tebas</h4>
-                  <p class="player-stats">4V - 0D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Jean</h4>
-                  <p class="player-stats">3V - 1D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Will</h4>
-                  <p class="player-stats">3V - 2D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Tor</h4>
-                  <p class="player-stats">1V - 2D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Foras Pai</h4>
-                  <p class="player-stats">1V - 3D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Maycão</h4>
-                  <p class="player-stats">0V - 2D</p>
-                </div>
-              </div>
-            </div>
-
-            <h3 class="group-title group-b"><i class="fas fa-users"></i> Grupo B</h3>
-            <div class="players-grid">
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Dean</h4>
-                  <p class="player-stats">4V - 0D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Anjo</h4>
-                  <p class="player-stats">3V - 1D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>David</h4>
-                  <p class="player-stats">2V - 2D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Jow</h4>
-                  <p class="player-stats">1V - 3D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Foras Filho</h4>
-                  <p class="player-stats">1V - 3D</p>
-                </div>
-              </div>
-              <div class="player-card">
-                <div class="player-info">
-                  <h4>Guerra</h4>
-                  <p class="player-stats">0V - 2D</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
-    </div>
 
-  
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
           <img src="logotipo.png" alt="Logo Legend Online" class="footer-logo-img">
-          <p>© 2025 Campeonato Legend Online - Todos os direitos reservados</p>
+          <p>&copy; 2025-2026 Campeonato Legend Online - Todos os direitos reservados</p>
         </div>
         <div class="footer-links">
           <div class="footer-social">
@@ -599,7 +107,7 @@
       </div>
     </div>
   </footer>
-  
+
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/447375637380" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>

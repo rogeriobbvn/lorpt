@@ -271,22 +271,6 @@ body {
   font-style: italic;
 }
 
-/* Payment status styles */
-.payment-status-paid {
-  color: #10b981; /* green */
-  margin-right: 5px;
-  font-size: 1.1em;
-}
-
-.payment-status-pending {
-  color: #ef4444; /* red */
-  margin-right: 5px;
-  font-size: 1.1em;
-}
-
-.players-table td:nth-child(4) {
-  font-weight: 500;
-}
 
 /* Rules Section */
 .rules-section {
@@ -461,95 +445,6 @@ body {
   display: block;
 }
 
-/* Registration Section */
-.registration-section {
-  padding: 2rem 0;
-}
-
-.section-title {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.registration-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  display: flex;
-  gap: 2rem;
-}
-
-.registration-info {
-  flex: 1;
-}
-
-.registration-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-}
-
-.registration-info p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-.registration-details {
-  list-style: none;
-  margin-bottom: 2rem;
-}
-
-.registration-details li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #e5e7eb;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.registration-details li:last-child {
-  border-bottom: none;
-}
-
-.registration-details li i {
-  color: var(--accent-color);
-}
-
-.registration-button {
-  display: inline-block;
-  background: var(--accent-color);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.registration-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.registration-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.registration-poster {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
 
 /* Enhanced Footer */
 .footer-content {
@@ -737,4 +632,203 @@ body {
   0% { transform: translate(0, 0); }
   50% { transform: translate(15px, -15px); }
   100% { transform: translate(0, 0); }
+}
+
+/* ========================
+   MATCH LIST - Estilos de Lutas
+   ======================== */
+
+/* Item de luta realizada */
+.match-complete {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Item de luta pendente */
+.match-pending {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.8;
+}
+
+/* Ícones de status */
+.match-icon-complete {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+.match-icon-pending {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* Nome do jogador */
+.match-player {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Placar - Vitória */
+.score-win {
+  font-weight: 800;
+  color: #16a34a;
+  font-size: 1.1rem;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+/* Placar - Derrota */
+.score-lose {
+  font-weight: 800;
+  color: #dc2626;
+  font-size: 1.1rem;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+/* Placar - Empate */
+.score-draw {
+  font-weight: 800;
+  color: #6b7280;
+  font-size: 1.1rem;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+/* "x" entre placares */
+.match-x {
+  font-weight: 500;
+  color: #9ca3af;
+  margin: 0 0.15rem;
+}
+
+/* "vs" entre jogadores (pendentes) */
+.match-vs {
+  font-weight: 500;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Nota da luta (MD9, W.O, etc) */
+.match-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Badge de rodada */
+.match-round {
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  margin-right: 0.25rem;
+}
+
+/* ========================
+   BOTÃO YOUTUBE
+   ======================== */
+
+.youtube-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF0000;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  margin-left: auto;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.youtube-link:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+}
+
+/* ========================
+   LINK CHALLONGE
+   ======================== */
+
+.challonge-link {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.challonge-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.challonge-link a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+}
+
+/* ========================
+   CLASSIFICAÇÃO - Extras
+   ======================== */
+
+.position-badge {
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.row-gold {
+  background: #fef9c3 !important;
+}
+
+.row-silver {
+  background: #f3f4f6 !important;
+}
+
+.balance-positive {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.balance-negative {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.player-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #9ca3af;
+}
+
+/* Mensagem vazia */
+.empty-msg {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.empty-msg i {
+  margin-right: 0.5rem;
+}
+
+/* Overflow helper */
+.overflow-x-auto {
+  overflow-x: auto;
 }
