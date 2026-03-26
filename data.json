@@ -193,8 +193,7 @@
           "name": "Fase de Grupos (Round Robin)",
           "type": "round_robin",
           "matches": [
-            { "round": 4, "player1": "Abner", "player2": "Matheus", "score1": "4", "score2": "1", "state": "complete", "winner": "Abner", "youtube_url": "https://www.youtube.com/watch?v=MOyAUiupgb8&t=870s" },
-            
+            { "round": 4, "player1": "Abner", "player2": "Matheus", "score1": "4", "score2": "1", "state": "complete", "winner": "Abner", "youtube_url": "https://www.youtube.com/watch?v=MOyAUiupgb8&t=870s" }            
           ]
         }
       ]
