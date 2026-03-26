@@ -24,7 +24,7 @@ requirements.txt      # Dependências do projeto
 ```
 
 ## Como rodar localmente
-
+ 
 1. Instale as dependências:
    ```sh
    pip install -r requirements.txt
